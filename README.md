@@ -11,7 +11,7 @@ The lab follows the presentation and moves from one exercise to another. Below i
 The lab assumes you have an [AWS Credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html) file setup with a user _profile_. For the purposes of this lab, you should setup your environment to use this profile you created and `us-west-2` as the default region. Execute the following commands:
 
 ```bash
-export AWS_DEFAULT_REGION us-west-2
+export AWS_DEFAULT_REGION=us-west-2
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity | jq --raw-output '.Account')
 export AWS_USER=$(aws sts get-caller-identity | jq --raw-output '.Arn' | awk -F'/' '{ print $2 }')
 ```
